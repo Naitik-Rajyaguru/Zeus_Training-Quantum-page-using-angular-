@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-logo-header [imgUrl]="'../../assets/quantum_screen_assets/icons/Zeus-LMS-logo.svg'"></app-logo-header>
+
+    <app-jobcard [viewde]="false" [apply]="true"  [data]="data[index]" (indexEvent)="indexset($event)"></app-jobcard>
+
+    <app-qualification-title [innerText]="'Pre-requisites & Application Process'"></app-qualification-title>
+    <app-slot></app-slot>
+    <div *ngFor="let title of data[index].jobroles">
+        <!-- <app-qualification-title [innerText]=title></app-qualification-title> -->
+        <app-rolediscription [whichDiscription]=title></app-rolediscription>
+    </div>
+    
+
+
+</body>
+</html>

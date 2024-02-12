@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    
+    <app-logo-header [imgUrl]="x"></app-logo-header>
+
+    <app-create-cancle></app-create-cancle>
+
+    <app-form-track [condition2]="true" [condition1]="true"></app-form-track>
+
+    <app-qualification-title [innerText]="educational"></app-qualification-title>
+    <app-educational-qualification></app-educational-qualification>
+
+    <app-qualification-title [innerText]="professional"></app-qualification-title>
+    <app-applicant-type></app-applicant-type>
+    
+    <app-professional-qualification *ngIf="fresher; else experianced" [condition]=true></app-professional-qualification>
+    <ng-template #experianced> <app-professional-qualification ></app-professional-qualification> </ng-template> 
+    
+    <app-footer-button next="/step3" prv="/step1"></app-footer-button>
+
+
+</body>
+</html>
